@@ -28,15 +28,15 @@ object HomeWidgetLaunchIntent {
       flags = flags or PendingIntent.FLAG_IMMUTABLE
     }
 
-    if (Build.VERSION.SDK_INT < 34) {
+    // if (Build.VERSION.SDK_INT < 34) {
       return PendingIntent.getActivity(context, 0, intent, flags)
-    }
+    // }
 
-    val options = ActivityOptions.makeBasic()
+    // val options = ActivityOptions.makeBasic()
 //    options.pendingIntentBackgroundActivityStartMode =
 //        ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED
 
-    return PendingIntent.getActivity(context, 0, intent, flags, options.toBundle())
+    // return PendingIntent.getActivity(context, 0, intent, flags, options.toBundle())
   }
 }
 
